@@ -4,14 +4,14 @@
 ///
 /// To use this font, place it in your fonts/ directory and include the
 /// following in your pubspec.yaml
+// ///
+//  flutter:
+//    fonts:
+//     - family:  ZooIcons
+//       fonts:
+//        - asset: fonts/ZooIcons.ttf
 ///
-/// flutter:
-///   fonts:
-///    - family:  ZooIcons
-///      fonts:
-///       - asset: fonts/ZooIcons.ttf
 ///
-/// 
 ///
 import 'package:flutter/widgets.dart';
 
@@ -21,9 +21,14 @@ class ZooIcons {
   static const _kFontFam = 'ZooIcons';
   static const String? _kFontPkg = null;
 
-  static const IconData house = IconData(0xe800, fontFamily: _kFontFam, fontPackage: _kFontPkg);
-  static const IconData map = IconData(0xe801, fontFamily: _kFontFam, fontPackage: _kFontPkg);
-  static const IconData camera = IconData(0xe802, fontFamily: _kFontFam, fontPackage: _kFontPkg);
-  static const IconData profile = IconData(0xe803, fontFamily: _kFontFam, fontPackage: _kFontPkg);
-  static const IconData animals = IconData(0xe804, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+  static const IconData house =
+      IconData(0xe800, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+  static const IconData map =
+      IconData(0xe801, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+  static const IconData camera =
+      IconData(0xe802, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+  static const IconData profile =
+      IconData(0xe803, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+  static const IconData animals =
+      IconData(0xe804, fontFamily: _kFontFam, fontPackage: _kFontPkg);
 }
