@@ -224,12 +224,12 @@ class _listinfor extends State<listinfor> {
                   left: 95, top: 40, child: Image(image: appimages.Layer)),
               const Positioned(
                 left: 30,
-                top: 335,
+                top: 350,
                 child: Image(image: appimages.audio),
               ),
               const Positioned(
                 left: 105,
-                top: 333,
+                top: 348,
                 child: Image(image: appimages.AR),
               ),
             ],
