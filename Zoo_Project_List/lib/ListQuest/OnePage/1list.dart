@@ -1,5 +1,5 @@
-import 'package:Zoo_Project/OnePage/ThemeOnePage/OnePageTheme.dart';
-import 'package:Zoo_Project/route/route.dart';
+import 'package:Zoo_Project/ListQuest/OnePage/ThemeOnePage/OnePageTheme.dart';
+import 'package:Zoo_Project/ListQuest/route/route.dart';
 
 import 'package:flutter/material.dart';
 

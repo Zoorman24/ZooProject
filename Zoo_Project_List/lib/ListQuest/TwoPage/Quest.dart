@@ -32,10 +32,6 @@ class _Quest extends State<Quest> {
                       size: 20,
                     ),
                   ),
-                  const Text(
-                    'Вопросы',
-                    style: TextStyle(fontWeight: FontWeight.w900, fontSize: 20),
-                  ),
                 ],
               ),
               const Padding(
@@ -44,7 +40,16 @@ class _Quest extends State<Quest> {
                     image: AssetImage('assets/image/num.png'),
                   )),
               const Row(
-                children: [Text('Тема: Животное')],
+                children: [
+                  Text(
+                    'Тема: Животное',
+                    style: TextStyle(
+                        fontSize: 12,
+                        fontWeight: FontWeight.w300,
+                        fontFamily: 'museo',
+                        color: Color.fromARGB(255, 72, 72, 72)),
+                  )
+                ],
               ),
               const SizedBox(
                 height: 24,
@@ -53,7 +58,11 @@ class _Quest extends State<Quest> {
                 children: [
                   Text(
                     'Выбиерите верный вариант:',
-                    style: TextStyle(fontWeight: FontWeight.w700, fontSize: 16),
+                    style: TextStyle(
+                        fontSize: 14,
+                        fontWeight: FontWeight.w600,
+                        fontFamily: 'museo',
+                        color: Color.fromARGB(255, 52, 32, 31)),
                   ),
                 ],
               ),

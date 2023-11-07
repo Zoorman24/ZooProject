@@ -1,5 +1,5 @@
-import 'package:Zoo_Project/OnePage/WidgetsOnePageList/ListAnimals.dart';
-import 'package:Zoo_Project/ZooIcons/zoo_icons.dart';
+import 'package:Zoo_Project/ListQuest/OnePage/WidgetsOnePageList/ListAnimals.dart';
+import 'package:Zoo_Project/ListQuest/ZooIcons/zoo_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:simple_circular_progress_bar/simple_circular_progress_bar.dart';
 
@@ -44,7 +44,11 @@ class _QuestList extends State<QuestList> {
                   ),
                   const Text(
                     'Задания',
-                    style: TextStyle(fontWeight: FontWeight.w900, fontSize: 20),
+                    style: TextStyle(
+                        fontWeight: FontWeight.w600,
+                        fontSize: 40,
+                        fontFamily: 'museo',
+                        color: Color.fromARGB(255, 0, 0, 0)),
                   ),
                 ],
               ),
@@ -66,7 +70,14 @@ class _QuestList extends State<QuestList> {
                       top: 60,
                       child: Column(
                         children: [
-                          Text('Победы:'),
+                          Text(
+                            'Победы:',
+                            style: TextStyle(
+                                fontSize: 12,
+                                fontWeight: FontWeight.w300,
+                                fontFamily: 'museo',
+                                color: Color.fromARGB(255, 72, 72, 72)),
+                          ),
                         ],
                       )),
                   const Positioned(
@@ -74,7 +85,14 @@ class _QuestList extends State<QuestList> {
                       top: 60,
                       child: Column(
                         children: [
-                          Text('Проигрыши:'),
+                          Text(
+                            'Проигрыши:',
+                            style: TextStyle(
+                                fontSize: 12,
+                                fontWeight: FontWeight.w300,
+                                fontFamily: 'museo',
+                                color: Color.fromARGB(255, 72, 72, 72)),
+                          ),
                         ],
                       )),
                   const Positioned(
@@ -82,7 +100,14 @@ class _QuestList extends State<QuestList> {
                       top: 20,
                       child: Column(
                         children: [
-                          Text('Общая статистика:'),
+                          Text(
+                            'Общая статистика:',
+                            style: TextStyle(
+                                fontSize: 12,
+                                fontWeight: FontWeight.w600,
+                                fontFamily: 'museo',
+                                color: Color.fromARGB(255, 72, 72, 72)),
+                          ),
                         ],
                       )),
                   Positioned(
@@ -104,9 +129,15 @@ class _QuestList extends State<QuestList> {
                                     side: BorderSide(
                                         color: Color.fromARGB(255, 0, 0, 0))))),
                         onPressed: () {
-                          Navigator.pushNamed(context, '/qr');
+                          // Navigator.pushNamed(context, '/qr');
                         },
-                        label: const Text('Сканировать точку'),
+                        label: const Text(
+                          'Сканировать точку',
+                          style: TextStyle(
+                              fontSize: 14,
+                              fontWeight: FontWeight.w300,
+                              fontFamily: 'museo'),
+                        ),
                         icon: const Icon(Icons.ac_unit),
                       )),
                   Positioned(
@@ -134,7 +165,16 @@ class _QuestList extends State<QuestList> {
                 ],
               ),
               const SizedBox(height: 23),
-              const Row(children: [Text('Задания на сегодня')]),
+              const Row(children: [
+                Text(
+                  'Задания на сегодня',
+                  style: TextStyle(
+                      fontSize: 12,
+                      fontWeight: FontWeight.w300,
+                      fontFamily: 'museo',
+                      color: Color.fromARGB(255, 72, 72, 72)),
+                )
+              ]),
               const SizedBox(
                 height: 9,
               ),
@@ -169,28 +209,5 @@ class _QuestList extends State<QuestList> {
         onTap: oneSelectTab,
       ),
     );
-
-    //
-
-    // ),
-    // body: ListView.separated(
-    //   separatorBuilder: (context, index) => const Divider(),
-    //   itemCount: 2,
-    //   itemBuilder: (context, i) => ListTile(
-    //     title: Text(
-    //       'Название животного',
-    //       style: theme.textTheme.bodyMedium,
-    //     ),
-    //     subtitle: Text(
-    //       'Место нахождение',
-    //       style: theme.textTheme.labelSmall,
-    //     ),
-    //     trailing: Icon(
-    //       Icons.my_location_outlined,
-    //       color: Colors.black,
-    //     ),
-    //   ),
-    // ),
-    // );
   }
 }

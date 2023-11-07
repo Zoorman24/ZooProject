@@ -1,5 +1,5 @@
-import 'package:Zoo_Project/OnePage/ThemeOnePage/SettingsthemePage.dart';
-import 'package:Zoo_Project/OnePage/ThemeOnePage/ThemeNavigation.dart';
+import 'package:Zoo_Project/ListQuest/OnePage/ThemeOnePage/SettingsthemePage.dart';
+import 'package:Zoo_Project/ListQuest/OnePage/ThemeOnePage/ThemeNavigation.dart';
 import 'package:flutter/material.dart';
 
 // ignore: non_constant_identifier_names
