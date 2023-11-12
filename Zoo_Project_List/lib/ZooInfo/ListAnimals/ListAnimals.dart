@@ -31,9 +31,8 @@ class _AnimalList extends State<ListAnimals> {
                   const Text(
                     'Млекопитающие',
                     style: TextStyle(
-                        fontWeight: FontWeight.w600,
                         fontSize: 32,
-                        fontFamily: 'museo',
+                        fontFamily: 'museo700',
                         color: Color.fromARGB(255, 0, 0, 0)),
                   ),
                 ],

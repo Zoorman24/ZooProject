@@ -24,11 +24,10 @@ class _Quest extends State<ZooinfoList> {
                 children: [
                   Icon(Icons.arrow_back_ios_new_outlined),
                   Text(
-                    'Животные',
+                    'ЖИВОТНЫЕ',
                     style: TextStyle(
-                        fontWeight: FontWeight.w600,
                         fontSize: 40,
-                        fontFamily: 'museo',
+                        fontFamily: 'Museo700',
                         color: Color.fromARGB(255, 0, 0, 0)),
                   ),
                 ],
