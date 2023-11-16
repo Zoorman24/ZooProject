@@ -175,7 +175,7 @@ class _QuestList extends State<QuestList> {
                   child: ListView.builder(
                 itemCount: 15,
                 itemBuilder: ((context, index) {
-                  return Animals();
+                  return const Animals();
                 }),
               ))
             ],

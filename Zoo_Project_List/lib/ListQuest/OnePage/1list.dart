@@ -1,4 +1,4 @@
-import 'package:Zoo_Project/ListQuest/OnePage/ThemeOnePage/OnePageTheme.dart';
+import 'package:Zoo_Project/ListQuest/OnePage/ThemeOnePage/One_Page_Theme.dart';
 import 'package:Zoo_Project/ListQuest/route/route.dart';
 
 import 'package:flutter/material.dart';
