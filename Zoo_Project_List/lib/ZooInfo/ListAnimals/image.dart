@@ -14,5 +14,4 @@ abstract class appimages {
   static const audio = AssetImage('assets/image/audio.png');
   static const AR = AssetImage('assets/image/AR.png');
   static const afr = AssetImage('assets/image/afr.png');
-  static const Rectangle2 = AssetImage('assets/image/Rectangle2.png');
 }

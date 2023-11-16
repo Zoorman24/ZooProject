@@ -8,33 +8,33 @@ class mammals extends StatelessWidget {
       padding: const EdgeInsets.only(top: 16),
       child: Stack(
         children: [
-          Container(
-              height: 91,
-              width: 380,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(20),
-                color: const Color.fromARGB(255, 245, 245, 245),
-              )),
           ListTile(
+            shape: RoundedRectangleBorder(
+              side: const BorderSide(
+                width: 0,
+                color: Color.fromARGB(255, 245, 245, 245),
+              ),
+              borderRadius: BorderRadius.circular(20),
+            ),
+            tileColor: const Color.fromARGB(255, 245, 245, 245),
+            leading: const Image(image: appimages.Rectangle),
+            minLeadingWidth: 92,
             title: const Text(
               'Название животного',
               style: TextStyle(
                   fontSize: 16,
-                  fontWeight: FontWeight.w600,
-                  fontFamily: 'museo',
+                  fontFamily: 'museo700',
                   color: Color.fromARGB(255, 52, 32, 31)),
             ),
             subtitle: const Text(
-              'Место нахождения',
+              'Место нахождения' '\n' '\n' '\n400m',
               style: TextStyle(
                   fontSize: 16,
-                  fontWeight: FontWeight.w300,
-                  fontFamily: 'museo',
+                  fontFamily: 'museo300',
                   color: Color.fromARGB(255, 52, 32, 31)),
             ),
-            leading: const Image(
-              image: appimages.Rectangle,
-            ),
+            isThreeLine: true,
+            dense: true,
             trailing: const Icon(
               Icons.location_on,
             ),
@@ -42,7 +42,6 @@ class mammals extends StatelessWidget {
               Navigator.of(context).pushNamed('listinfor');
             },
           ),
-          const Positioned(top: 66, left: 92, child: Text('400m ')),
         ],
       ),
     );

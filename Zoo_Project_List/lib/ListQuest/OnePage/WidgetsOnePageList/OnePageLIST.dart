@@ -45,9 +45,8 @@ class _QuestList extends State<QuestList> {
                   const Text(
                     'Задания',
                     style: TextStyle(
-                        fontWeight: FontWeight.w600,
                         fontSize: 40,
-                        fontFamily: 'museo',
+                        fontFamily: 'museo700',
                         color: Color.fromARGB(255, 0, 0, 0)),
                   ),
                 ],
@@ -74,8 +73,7 @@ class _QuestList extends State<QuestList> {
                             'Победы:',
                             style: TextStyle(
                                 fontSize: 12,
-                                fontWeight: FontWeight.w300,
-                                fontFamily: 'museo',
+                                fontFamily: 'museo300',
                                 color: Color.fromARGB(255, 72, 72, 72)),
                           ),
                         ],
@@ -89,8 +87,7 @@ class _QuestList extends State<QuestList> {
                             'Проигрыши:',
                             style: TextStyle(
                                 fontSize: 12,
-                                fontWeight: FontWeight.w300,
-                                fontFamily: 'museo',
+                                fontFamily: 'museo300',
                                 color: Color.fromARGB(255, 72, 72, 72)),
                           ),
                         ],
@@ -104,8 +101,7 @@ class _QuestList extends State<QuestList> {
                             'Общая статистика:',
                             style: TextStyle(
                                 fontSize: 12,
-                                fontWeight: FontWeight.w600,
-                                fontFamily: 'museo',
+                                fontFamily: 'museo700',
                                 color: Color.fromARGB(255, 72, 72, 72)),
                           ),
                         ],
@@ -133,10 +129,8 @@ class _QuestList extends State<QuestList> {
                         },
                         label: const Text(
                           'Сканировать точку',
-                          style: TextStyle(
-                              fontSize: 14,
-                              fontWeight: FontWeight.w300,
-                              fontFamily: 'museo'),
+                          style:
+                              TextStyle(fontSize: 14, fontFamily: 'museo300'),
                         ),
                         icon: const Icon(Icons.ac_unit),
                       )),
@@ -170,8 +164,7 @@ class _QuestList extends State<QuestList> {
                   'Задания на сегодня',
                   style: TextStyle(
                       fontSize: 12,
-                      fontWeight: FontWeight.w300,
-                      fontFamily: 'museo',
+                      fontFamily: 'museo300',
                       color: Color.fromARGB(255, 72, 72, 72)),
                 )
               ]),

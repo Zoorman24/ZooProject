@@ -78,6 +78,13 @@ flutter:
    - family:  museo
      fonts:
      - asset: assets/fonts/museocyrl.ttf
+   - family:  Museo700
+     fonts:
+     - asset: assets/fonts/Museo Cyrl 700.ttf
+   - family:  Museo300
+     fonts:
+     - asset: assets/fonts/Museo Cyrl 300.ttf
+
        
   #       - asset: fonts/Schyler-Italic.ttf
   #         style: italic

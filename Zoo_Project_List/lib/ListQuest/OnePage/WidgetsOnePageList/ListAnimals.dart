@@ -19,16 +19,14 @@ class Animals extends StatelessWidget {
               'Название животного',
               style: TextStyle(
                   fontSize: 16,
-                  fontWeight: FontWeight.w600,
-                  fontFamily: 'museo',
+                  fontFamily: 'museo700',
                   color: Color.fromARGB(255, 52, 32, 31)),
             ),
             subtitle: const Text(
               'Место нахождения',
               style: TextStyle(
                   fontSize: 16,
-                  fontWeight: FontWeight.w300,
-                  fontFamily: 'museo',
+                  fontFamily: 'museo300',
                   color: Color.fromARGB(255, 52, 32, 31)),
             ),
             leading: const Icon(
@@ -42,7 +40,7 @@ class Animals extends StatelessWidget {
               Navigator.pushNamed(context, '/Quest');
             },
           ),
-          const Positioned(top: 22, left: 274, child: Text('Points')),
+          const Positioned(top: 22, left: 274, child: Text('10')),
         ],
       ),
     );
