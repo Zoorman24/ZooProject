@@ -18,6 +18,7 @@ class mammals extends StatelessWidget {
             ),
             tileColor: const Color.fromARGB(255, 245, 245, 245),
             leading: const Image(image: appimages.Rectangle),
+            minLeadingWidth: 92,
             title: const Text(
               'Название животного',
               style: TextStyle(
@@ -26,7 +27,7 @@ class mammals extends StatelessWidget {
                   color: Color.fromARGB(255, 52, 32, 31)),
             ),
             subtitle: const Text(
-              'Место нахождения' '\n' '\n400m',
+              'Место нахождения' '\n' '\n' '\n400m',
               style: TextStyle(
                   fontSize: 16,
                   fontFamily: 'museo300',
