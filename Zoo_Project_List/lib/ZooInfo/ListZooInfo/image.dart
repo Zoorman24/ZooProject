@@ -1,6 +1,7 @@
 import 'package:flutter/widgets.dart';
 
 abstract class appimages {
+  static const arrow = AssetImage('assets/image/arrowcircleleft4.png');
   static const ml = AssetImage('assets/image/Mlek.png');
   static const birds = AssetImage('assets/image/Birds.png');
   // ignore: constant_identifier_names
@@ -14,5 +15,6 @@ abstract class appimages {
   static const audio = AssetImage('assets/image/audio.png');
   static const AR = AssetImage('assets/image/AR.png');
   static const afr = AssetImage('assets/image/afr.png');
-  static const Rectangle2 = AssetImage('assets/image/Rectangle2.png');
+
+  static const Rectangle4 = AssetImage('assets/image/Rectanglex4.png');
 }

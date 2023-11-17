@@ -42,7 +42,7 @@ class _AnimalList extends State<ListAnimals> {
               ),
               Expanded(
                   child: ListView.builder(
-                itemCount: 15,
+                itemCount: 6,
                 itemBuilder: ((context, index) {
                   return const mammals();
                 }),

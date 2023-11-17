@@ -245,17 +245,17 @@ class _listinfor extends State<listinfor> {
                   ),
                 ),
                 const Positioned(
-                    top: 475, left: 230, child: Image(image: appimages.afr)),
+                    top: 535, left: 230, child: Image(image: appimages.afr)),
                 const Positioned(
-                    left: 70, top: 40, child: Image(image: appimages.Layer)),
+                    left: 70, top: 70, child: Image(image: appimages.Layer)),
                 const Positioned(
                   left: 30,
-                  top: 350,
+                  top: 385,
                   child: Image(image: appimages.audio),
                 ),
                 const Positioned(
                   left: 105,
-                  top: 348,
+                  top: 380,
                   child: Image(image: appimages.AR),
                 ),
               ],
