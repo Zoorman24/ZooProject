@@ -65,6 +65,22 @@ class _MainScreenState extends State<MainScreen> {
                   ))
               .toList(),
         ),
+        bottomNavigationBar: NavBar(
+          pageIndex: selectedTab,
+          onTap: (index) {
+            if (index == selectedTab) {
+              // Navigator.pushNamed(context, '/Zooinfolist');
+              items[index]
+                  .navKey
+                  .currentState
+                  ?.popUntil((route) => route.isFirst);
+            } else {
+              setState(() {
+                selectedTab = index;
+              });
+            }
+          },
+        ),
         floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
         floatingActionButton: Container(
           margin: const EdgeInsets.only(top: 64),
@@ -84,21 +100,6 @@ class _MainScreenState extends State<MainScreen> {
               color: Colors.white,
             ),
           ),
-        ),
-        bottomNavigationBar: NavBar(
-          pageIndex: selectedTab,
-          onTap: (index) {
-            if (index == selectedTab) {
-              items[index]
-                  .navKey
-                  .currentState
-                  ?.popUntil((route) => route.isFirst);
-            } else {
-              setState(() {
-                selectedTab = index;
-              });
-            }
-          },
         ),
       ),
     );
@@ -121,13 +122,14 @@ class TabPage extends StatelessWidget {
             Text('Tab $tab'),
             ElevatedButton(
               onPressed: () {
+                // Navigator.pushNamed(context, '/Zooinfolist');
                 Navigator.of(context).push(
                   MaterialPageRoute(
                     builder: (context) => Page(tab: tab),
                   ),
                 );
               },
-              child: const Text('Go to page'),
+              child: const Text('Go to  page'),
             )
           ],
         ),

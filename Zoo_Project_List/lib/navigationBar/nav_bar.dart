@@ -1,4 +1,4 @@
-import 'dart:io';
+// import 'dart:io';
 
 import 'package:flutter/material.dart';
 
@@ -15,9 +15,9 @@ class NavBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.only(
-        bottom: Platform.isAndroid ? 16 : 0,
-      ),
+      // margin: EdgeInsets.only(
+      //   bottom: Platform.isAndroid ? 16 : 0,
+      // ),
       child: BottomAppBar(
         elevation: 0.0,
         child: ClipRRect(

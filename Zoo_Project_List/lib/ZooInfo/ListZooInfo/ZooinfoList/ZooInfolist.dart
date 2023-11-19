@@ -19,10 +19,14 @@ class _Quest extends State<ZooinfoList> {
           child: Column(
             children: [
               const SizedBox(height: 16),
-              const Row(
+              Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Icon(Icons.arrow_back_ios_new_outlined),
+                  InkWell(
+                      onTap: () {
+                        Navigator.pop(context);
+                      },
+                      child: Icon(Icons.arrow_back_ios_new_outlined)),
                   Text(
                     'ЖИВОТНЫЕ',
                     style: TextStyle(
