@@ -1,3 +1,4 @@
+import 'package:Zoo_Project/ZooInfo/ListAnimals/ListAnimals.dart';
 import 'package:Zoo_Project/ZooInfo/ListZooInfo/image.dart';
 import 'package:flutter/material.dart';
 
@@ -24,7 +25,7 @@ class _Quest extends State<ZooinfoList> {
                 children: [
                   InkWell(
                       onTap: () {
-                        Navigator.pop(context);
+                        // Navigator.pop(context);
                       },
                       child: Icon(Icons.arrow_back_ios_new_outlined)),
                   Text(
@@ -45,7 +46,8 @@ class _Quest extends State<ZooinfoList> {
                 children: [
                   InkWell(
                     onTap: () {
-                      Navigator.pushNamed(context, 'ListAnimals');
+                      Navigator.of(context).push(MaterialPageRoute(
+                          builder: (context) => ListAnimals()));
                     },
                     child: const Image(
                       image: appimages.ml,

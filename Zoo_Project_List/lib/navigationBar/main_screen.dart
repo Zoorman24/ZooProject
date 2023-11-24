@@ -1,5 +1,10 @@
+import 'package:Zoo_Project/ListQuest/OnePage/WidgetsOnePageList/OnePageLIST.dart';
+import 'package:Zoo_Project/ZooInfo/ListZooInfo/ZooinfoList/ZooInfolist.dart';
+import 'package:Zoo_Project/ZooInfo/listInfor/listinfor.dart';
+import 'package:Zoo_Project/navigationBar/nav_model.dart';
+
 import 'nav_bar.dart';
-import 'nav_model.dart';
+
 import 'package:flutter/material.dart';
 
 class MainScreen extends StatefulWidget {
@@ -11,30 +16,31 @@ class MainScreen extends StatefulWidget {
 
 class _MainScreenState extends State<MainScreen> {
   final homeNavKey = GlobalKey<NavigatorState>();
-  final searchNavKey = GlobalKey<NavigatorState>();
-  final notificationNavKey = GlobalKey<NavigatorState>();
+  final animalslist = GlobalKey<NavigatorState>();
+  final maplist = GlobalKey<NavigatorState>();
   final profileNavKey = GlobalKey<NavigatorState>();
   int selectedTab = 0;
-  List<NavModel> items = [];
+
+  List<NavModel> _wigetList = [];
 
   @override
   void initState() {
     super.initState();
-    items = [
+    _wigetList = [
       NavModel(
-        page: const TabPage(tab: 1),
+        page: const listinfor(),
         navKey: homeNavKey,
       ),
       NavModel(
-        page: const TabPage(tab: 2),
-        navKey: searchNavKey,
+        page: const ZooinfoList(),
+        navKey: animalslist,
       ),
       NavModel(
-        page: const TabPage(tab: 3),
-        navKey: notificationNavKey,
+        page: const QuestList(),
+        navKey: maplist,
       ),
       NavModel(
-        page: const TabPage(tab: 4),
+        page: const ZooinfoList(),
         navKey: profileNavKey,
       ),
     ];
@@ -42,112 +48,54 @@ class _MainScreenState extends State<MainScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return WillPopScope(
-      onWillPop: () {
-        if (items[selectedTab].navKey.currentState?.canPop() ?? false) {
-          items[selectedTab].navKey.currentState?.pop();
-          return Future.value(false);
-        } else {
-          return Future.value(true);
-        }
-      },
-      child: Scaffold(
-        body: IndexedStack(
+    return Scaffold(
+      body: IndexedStack(
           index: selectedTab,
-          children: items
-              .map((page) => Navigator(
-                    key: page.navKey,
-                    onGenerateInitialRoutes: (navigator, initialRoute) {
+          children: _wigetList
+              .map((Page) => Navigator(
+                    key: Page.navKey,
+                    onGenerateInitialRoutes: (navigator, InitialRoute) {
                       return [
-                        MaterialPageRoute(builder: (context) => page.page)
+                        MaterialPageRoute(builder: (context) => Page.page)
                       ];
                     },
                   ))
-              .toList(),
-        ),
-        bottomNavigationBar: NavBar(
-          pageIndex: selectedTab,
-          onTap: (index) {
-            if (index == selectedTab) {
-              // Navigator.pushNamed(context, '/Zooinfolist');
-              items[index]
-                  .navKey
-                  .currentState
-                  ?.popUntil((route) => route.isFirst);
-            } else {
-              setState(() {
-                selectedTab = index;
-              });
-            }
-          },
-        ),
-        floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
-        floatingActionButton: Container(
-          margin: const EdgeInsets.only(top: 64),
-          height: 64,
-          width: 64,
-          child: FloatingActionButton(
-            backgroundColor: Color.fromRGBO(1, 98, 63, 1),
-            elevation: 0,
-            onPressed: () => debugPrint("Add Button pressed"),
-            shape: RoundedRectangleBorder(
-              side: const BorderSide(
-                  width: 3, color: Color.fromRGBO(1, 98, 63, 1)),
-              borderRadius: BorderRadius.circular(100),
-            ),
-            child: const Icon(
-              Icons.camera_alt,
-              color: Colors.white,
-            ),
+              .toList()),
+      bottomNavigationBar: NavBar(
+        pageIndex: selectedTab,
+        onTap: (index) {
+          if (index == selectedTab) {
+            _wigetList[index]
+                .navKey
+                .currentState
+                ?.popUntil((route) => route.isFirst);
+          } else {
+            setState(() {
+              selectedTab = index;
+            });
+          }
+        },
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+      floatingActionButton: Container(
+        margin: const EdgeInsets.only(top: 64),
+        height: 64,
+        width: 64,
+        child: FloatingActionButton(
+          backgroundColor: Color.fromRGBO(1, 98, 63, 1),
+          elevation: 0,
+          onPressed: () => debugPrint("Add Button pressed"),
+          shape: RoundedRectangleBorder(
+            side:
+                const BorderSide(width: 3, color: Color.fromRGBO(1, 98, 63, 1)),
+            borderRadius: BorderRadius.circular(100),
+          ),
+          child: const Icon(
+            Icons.camera_alt,
+            color: Colors.white,
           ),
         ),
       ),
-    );
-  }
-}
-
-class TabPage extends StatelessWidget {
-  final int tab;
-
-  const TabPage({Key? key, required this.tab}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: Text('Tab $tab')),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text('Tab $tab'),
-            ElevatedButton(
-              onPressed: () {
-                // Navigator.pushNamed(context, '/Zooinfolist');
-                Navigator.of(context).push(
-                  MaterialPageRoute(
-                    builder: (context) => Page(tab: tab),
-                  ),
-                );
-              },
-              child: const Text('Go to  page'),
-            )
-          ],
-        ),
-      ),
-    );
-  }
-}
-
-class Page extends StatelessWidget {
-  final int tab;
-
-  const Page({super.key, required this.tab});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: Text('Page Tab $tab')),
-      body: Center(child: Text('Tab $tab')),
     );
   }
 }
