@@ -1,3 +1,4 @@
+import 'package:Zoo_Project/ListQuest/TwoPage/Quest.dart';
 import 'package:flutter/material.dart';
 
 class Animals extends StatelessWidget {
@@ -39,7 +40,8 @@ class Animals extends StatelessWidget {
               Icons.location_on,
             ),
             onTap: () {
-              Navigator.pushNamed(context, '/Quest');
+              Navigator.of(context)
+                  .push(MaterialPageRoute(builder: (context) => Quest()));
             },
           ),
           const Positioned(top: 22, left: 274, child: Text('10')),

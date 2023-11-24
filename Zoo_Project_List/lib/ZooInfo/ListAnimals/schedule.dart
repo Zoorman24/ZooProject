@@ -1,4 +1,6 @@
 import 'package:Zoo_Project/ZooInfo/ListAnimals/image.dart';
+import 'package:Zoo_Project/ZooInfo/listInfor/listinfor.dart';
+
 import 'package:flutter/material.dart';
 
 class mammals extends StatelessWidget {
@@ -12,11 +14,12 @@ class mammals extends StatelessWidget {
         children: [
           InkWell(
             onTap: () {
-              Navigator.pushNamed(context, 'listinfor');
+              Navigator.of(context)
+                  .push(MaterialPageRoute(builder: (context) => listinfor()));
             },
             child: Container(
               height: 91,
-              width: 360,
+              width: 380,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(20),
                 color: Color.fromARGB(255, 245, 245, 245),

@@ -1,5 +1,5 @@
 import 'package:Zoo_Project/ListQuest/OnePage/WidgetsOnePageList/ListAnimals.dart';
-import 'package:Zoo_Project/ListQuest/ZooIcons/zoo_icons.dart';
+
 import 'package:flutter/material.dart';
 import 'package:simple_circular_progress_bar/simple_circular_progress_bar.dart';
 
@@ -181,25 +181,6 @@ class _QuestList extends State<QuestList> {
             ],
           ),
         ),
-      ),
-      bottomNavigationBar: BottomNavigationBar(
-        currentIndex: selectIndex,
-        items: const [
-          BottomNavigationBarItem(icon: Icon(ZooIcons.house), label: 'Home'),
-          BottomNavigationBarItem(icon: Icon(ZooIcons.animals), label: 'zoo'),
-          BottomNavigationBarItem(
-              icon: Icon(
-                ZooIcons.camera,
-              ),
-              label: 'Camera'),
-          BottomNavigationBarItem(
-            icon: Icon(ZooIcons.map),
-            label: 'Map',
-          ),
-          BottomNavigationBarItem(
-              icon: Icon(ZooIcons.profile), label: 'Profile'),
-        ],
-        onTap: oneSelectTab,
       ),
     );
   }
