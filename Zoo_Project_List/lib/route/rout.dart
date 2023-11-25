@@ -1,5 +1,5 @@
 import 'package:Zoo_Project/ZooInfo/ListAnimals/ListAnimals.dart';
-import 'package:Zoo_Project/ZooInfo/ListZooInfo/ZooinfoList/ZooInfolist.dart';
+import 'package:Zoo_Project/ZooInfo/ListZooInfo/ZooInfolist.dart';
 import 'package:Zoo_Project/ZooInfo/listInfor/listinfor.dart';
 import 'package:Zoo_Project/navigationBar/main_screen.dart';
 

@@ -1,5 +1,6 @@
 // import 'dart:io';
 
+import 'package:Zoo_Project/ZooIcons/zoo_icons.dart';
 import 'package:flutter/material.dart';
 
 class NavBar extends StatelessWidget {
@@ -35,23 +36,23 @@ class NavBar extends StatelessWidget {
             child: Row(
               children: [
                 navItem(
-                  Icons.home_outlined,
+                  ZooIcons.house,
                   pageIndex == 0,
                   onTap: () => onTap(0),
                 ),
                 navItem(
-                  Icons.message_outlined,
+                  ZooIcons.animals,
                   pageIndex == 1,
                   onTap: () => onTap(1),
                 ),
                 const SizedBox(width: 60),
                 navItem(
-                  Icons.notifications_none_outlined,
+                  ZooIcons.map,
                   pageIndex == 2,
                   onTap: () => onTap(2),
                 ),
                 navItem(
-                  Icons.person_outline,
+                  ZooIcons.profile,
                   pageIndex == 3,
                   onTap: () => onTap(3),
                 ),

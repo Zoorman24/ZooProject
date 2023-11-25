@@ -1,5 +1,5 @@
 import 'package:Zoo_Project/ZooInfo/ListAnimals/ListAnimals.dart';
-import 'package:Zoo_Project/ZooInfo/ListZooInfo/image.dart';
+import 'package:Zoo_Project/image/image.dart';
 import 'package:flutter/material.dart';
 
 @override
@@ -21,13 +21,8 @@ class _Quest extends State<ZooinfoList> {
             children: [
               const SizedBox(height: 16),
               Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                mainAxisAlignment: MainAxisAlignment.end,
                 children: [
-                  InkWell(
-                      onTap: () {
-                        // Navigator.pop(context);
-                      },
-                      child: Icon(Icons.arrow_back_ios_new_outlined)),
                   Text(
                     'ЖИВОТНЫЕ',
                     style: TextStyle(
