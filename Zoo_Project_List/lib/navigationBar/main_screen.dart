@@ -1,7 +1,6 @@
 import 'package:Zoo_Project/ListQuest/OnePage/WidgetsOnePageList/OnePageLIST.dart';
 import 'package:Zoo_Project/ProfileList/profilelist.dart';
 import 'package:Zoo_Project/ZooInfo/ListZooInfo/ZooInfolist.dart';
-import 'package:Zoo_Project/ZooInfo/listInfor/listinfor.dart';
 
 import 'package:Zoo_Project/navigationBar/nav_model.dart';
 
@@ -30,7 +29,7 @@ class _MainScreenState extends State<MainScreen> {
     super.initState();
     _wigetList = [
       NavModel(
-        page: const listinfor(),
+        page: const ZooinfoList(),
         navKey: homeNavKey,
       ),
       NavModel(
