@@ -1,4 +1,5 @@
 import 'package:Zoo_Project/ZooInfo/ListAnimals/schedule.dart';
+import 'package:Zoo_Project/image/image.dart';
 import 'package:flutter/material.dart';
 
 @override
@@ -23,7 +24,7 @@ class _AnimalList extends State<ListAnimals> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   InkWell(
-                    child: const Icon(Icons.arrow_back_ios_new_outlined),
+                    child: Image(image: appimages.arrowcircleleft),
                     onTap: () {
                       Navigator.pop(context);
                     },

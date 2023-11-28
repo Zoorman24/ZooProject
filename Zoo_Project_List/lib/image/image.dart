@@ -15,6 +15,11 @@ abstract class appimages {
   static const audio = AssetImage('assets/image/audio.png');
   static const AR = AssetImage('assets/image/AR.png');
   static const afr = AssetImage('assets/image/afr.png');
-
+  static const arrowcircleleft = AssetImage('assets/image/arrowcircleleft.png');
+  static const zoofood3 = AssetImage('assets/image/zoofood3.png');
+  static const iconlistcheck = AssetImage('assets/image/iconlistcheck.png');
+  static const iconfontticket = AssetImage('assets/image/iconfontticket.png');
   static const Rectangle4 = AssetImage('assets/image/Rectanglex4.png');
+  static const iconfontuser = AssetImage('assets/image/iconfontuser.png');
+  static const comments = AssetImage('assets/image/comments.png');
 }

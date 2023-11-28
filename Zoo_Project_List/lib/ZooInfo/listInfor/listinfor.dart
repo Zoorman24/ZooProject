@@ -1,5 +1,5 @@
 import 'package:Zoo_Project/image/image.dart';
-
+import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
 
 @override
@@ -9,17 +9,42 @@ class listinfor extends StatefulWidget {
   State<listinfor> createState() => _listinfor();
 }
 
-double finalduration = const Duration(minutes: 5).inSeconds.toDouble();
-Duration duration = const Duration(minutes: 5);
+final player = AudioPlayer();
+bool isPlaying = false;
+Duration duration = new Duration();
+Duration position = new Duration();
 
-String transformString(int seconds) {
-  String minuteString =
-      '${(seconds / 60).floor() < 10 ? 0 : ''}${(seconds / 60).floor()}';
-  String secondString = '${seconds % 60 < 10 ? 0 : ''}${seconds % 60}';
-  return '$minuteString:$secondString';
+String formatTime(int seconds) {
+  return '${(Duration(seconds: seconds))}'.split('.')[0].padLeft(8, '0');
 }
 
 class _listinfor extends State<listinfor> {
+  @override
+  void initState() {
+    super.initState();
+
+    player.onPlayerStateChanged.listen((state) {
+      setState(() {
+        isPlaying = state == PlayerState.playing;
+      });
+    });
+
+    player.onDurationChanged.listen((newDuration) {
+      setState(() {
+        duration = newDuration;
+      });
+    });
+
+    player.onPositionChanged.listen((newPosition) {
+      setState(() {
+        position = newPosition;
+      });
+      if (duration.inSeconds.toDouble() == position.inSeconds.toDouble()) {
+        player.stop();
+      }
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -33,13 +58,11 @@ class _listinfor extends State<listinfor> {
                   padding: const EdgeInsets.fromLTRB(11, 16, 10, 0),
                   child: Column(
                     children: [
-                      const SizedBox(height: 16),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           InkWell(
-                            child:
-                                const Icon(Icons.arrow_back_ios_new_outlined),
+                            child: Image(image: appimages.arrowcircleleft),
                             onTap: () {
                               Navigator.pop(context);
                             },
@@ -217,41 +240,103 @@ class _listinfor extends State<listinfor> {
                                 borderRadius: BorderRadius.circular(20),
                                 color: const Color.fromRGBO(255, 179, 87, 1)),
                             child: Padding(
-                              padding: EdgeInsets.fromLTRB(15, 36, 15, 0),
+                              padding: EdgeInsets.fromLTRB(27, 51, 12, 0),
                               child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
-                                  Container(
-                                    child: Column(
-                                      children: [
-                                        SliderTheme(
-                                            data: SliderThemeData(
+                                  Row(
+                                    children: [
+                                      Padding(
+                                        padding: const EdgeInsets.only(
+                                          top: 13,
+                                        ),
+                                        child: Container(
+                                          padding: EdgeInsets.only(left: 2),
+                                          width: 284,
+                                          height: 11,
+                                          decoration: BoxDecoration(
+                                              borderRadius:
+                                                  BorderRadius.circular(20),
+                                              color: Colors.white),
+                                          child: SizedBox(
+                                            height: 7,
+                                            width: 281,
+                                            child: SliderTheme(
+                                              data: SliderThemeData(
                                                 overlayShape:
                                                     SliderComponentShape
-                                                        .noOverlay),
-                                            child: Slider(
-                                              value: finalduration -
-                                                  duration.inSeconds.toDouble(),
-                                              min: 0.0,
-                                              max: finalduration,
-                                              onChanged: (v) => {
-                                                setState(() {
-                                                  duration = Duration(
-                                                      seconds: finalduration
-                                                              .toInt() -
-                                                          v.toInt());
-                                                })
-                                              },
-                                              activeColor: Colors.redAccent,
-                                              inactiveColor: Colors.grey,
-                                            )),
-                                        Row(
-                                          mainAxisAlignment:
-                                              MainAxisAlignment.end,
-                                          children: [
-                                            Text(transformString(
-                                                duration.inSeconds))
-                                          ],
+                                                        .noOverlay,
+                                                activeTrackColor:
+                                                    const Color.fromARGB(
+                                                        255, 0, 117, 72),
+                                                inactiveTrackColor:
+                                                    const Color.fromARGB(
+                                                        255, 255, 255, 255),
+                                                trackHeight: 7,
+                                                thumbShape:
+                                                    RoundSliderThumbShape(
+                                                        enabledThumbRadius: 0),
+                                              ),
+                                              child: Slider(
+                                                min: 0,
+                                                max: duration.inSeconds
+                                                    .toDouble(),
+                                                value: position.inSeconds
+                                                    .toDouble(),
+                                                onChanged: (value) {
+                                                  final position = Duration(
+                                                      seconds: value.toInt());
+                                                  player.seek(position);
+                                                  player.resume();
+                                                },
+                                              ),
+                                            ),
+                                          ),
+                                        ),
+                                      ),
+                                      Container(
+                                        height: 27,
+                                        child: IconButton(
+                                          icon: Icon(
+                                            isPlaying
+                                                ? Icons.pause
+                                                : Icons.play_arrow,
+                                          ),
+                                          onPressed: () {
+                                            if (isPlaying) {
+                                              player.pause();
+                                            } else {
+                                              player.play(AssetSource(
+                                                  'sound/sound3.mp3'));
+                                            }
+                                          },
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                  Container(
+                                    padding: EdgeInsets.fromLTRB(0, 7, 52, 0),
+                                    child: Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.spaceBetween,
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      children: [
+                                        Text(
+                                          formatTime(position.inSeconds),
+                                          style: TextStyle(
+                                            fontSize: 8,
+                                            color: Colors.white,
+                                            fontFamily: 'museo500',
+                                          ),
+                                        ),
+                                        Text(
+                                          formatTime(
+                                              (duration - position).inSeconds),
+                                          style: TextStyle(
+                                            fontSize: 8,
+                                            color: Colors.white,
+                                            fontFamily: 'museo500',
+                                          ),
                                         ),
                                       ],
                                     ),
@@ -395,10 +480,10 @@ class _listinfor extends State<listinfor> {
                   ),
                 ),
                 const Positioned(
-                    left: 100, top: 85, child: Image(image: appimages.Layer)),
+                    left: 100, top: 70, child: Image(image: appimages.Layer)),
                 Positioned(
                   left: 30,
-                  top: 385,
+                  top: 370,
                   child: Container(
                     child: Row(
                       children: [
