@@ -1,4 +1,3 @@
-import 'package:Zoo_Project/ListQuest/OnePage/WidgetsOnePageList/OnePageLIST.dart';
 import 'package:Zoo_Project/ProfileList/profilelist.dart';
 import 'package:Zoo_Project/ZooInfo/ListZooInfo/ZooInfolist.dart';
 
@@ -37,7 +36,7 @@ class _MainScreenState extends State<MainScreen> {
         navKey: animalslist,
       ),
       NavModel(
-        page: const QuestList(),
+        page: const profile(),
         navKey: maplist,
       ),
       NavModel(

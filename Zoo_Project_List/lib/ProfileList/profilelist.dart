@@ -1,5 +1,9 @@
+import 'package:Zoo_Project/ProfileList/listquestion/Personaldata.dart';
+import 'package:Zoo_Project/ProfileList/listquestion/questionlist.dart';
+import 'package:Zoo_Project/ProfileList/listquestion/tecketlist/ticketlist.dart';
 import 'package:Zoo_Project/image/image.dart';
 import 'package:flutter/material.dart';
+import 'package:Zoo_Project/ListQuest/OnePage/WidgetsOnePageList/OnePageLIST.dart';
 
 @override
 class profile extends StatefulWidget {
@@ -27,6 +31,7 @@ class _profile extends State<profile> {
                       borderRadius: BorderRadius.circular(20),
                       color: const Color.fromARGB(255, 1, 98, 63)),
                   child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Container(
                         padding: EdgeInsets.fromLTRB(19, 0, 0, 16),
@@ -35,12 +40,12 @@ class _profile extends State<profile> {
                           'Заказать еду',
                           style: TextStyle(
                               fontSize: 16,
-                              fontFamily: 'mouse700',
+                              fontFamily: 'museo700',
                               color: Colors.white),
                         ),
                       ),
                       Padding(
-                        padding: const EdgeInsets.only(left: 179),
+                        padding: const EdgeInsets.fromLTRB(0, 0, 14, 0),
                         child: Container(
                           height: 60,
                           width: 55,
@@ -57,7 +62,10 @@ class _profile extends State<profile> {
                 height: 11,
               ),
               InkWell(
-                onTap: () {},
+                onTap: () {
+                  Navigator.of(context).push(
+                      MaterialPageRoute(builder: (context) => QuestList()));
+                },
                 child: Container(
                   height: 97,
                   width: double.infinity,
@@ -65,6 +73,7 @@ class _profile extends State<profile> {
                       borderRadius: BorderRadius.circular(20),
                       color: const Color.fromARGB(255, 240, 240, 240)),
                   child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Container(
                         padding: EdgeInsets.fromLTRB(19, 0, 0, 16),
@@ -73,15 +82,15 @@ class _profile extends State<profile> {
                           'Прогресс изучения',
                           style: TextStyle(
                               fontSize: 16,
-                              fontFamily: 'mouse700',
+                              fontFamily: 'museo700',
                               color: const Color.fromARGB(255, 52, 32, 31)),
                         ),
                       ),
                       Padding(
-                        padding: const EdgeInsets.only(left: 140),
+                        padding: const EdgeInsets.fromLTRB(0, 0, 14, 0),
                         child: Container(
-                          height: 42,
-                          width: 42,
+                          height: 60,
+                          width: 55,
                           child: Image(
                             image: appimages.iconlistcheck,
                           ),
@@ -95,7 +104,10 @@ class _profile extends State<profile> {
                 height: 11,
               ),
               InkWell(
-                onTap: () {},
+                onTap: () {
+                  Navigator.of(context).push(
+                      MaterialPageRoute(builder: (context) => ticketlist()));
+                },
                 child: Container(
                   height: 97,
                   width: double.infinity,
@@ -103,6 +115,7 @@ class _profile extends State<profile> {
                       borderRadius: BorderRadius.circular(20),
                       color: const Color.fromARGB(255, 240, 240, 240)),
                   child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Container(
                         padding: EdgeInsets.fromLTRB(19, 0, 0, 16),
@@ -111,15 +124,15 @@ class _profile extends State<profile> {
                           'Купить билет',
                           style: TextStyle(
                               fontSize: 16,
-                              fontFamily: 'mouse700',
+                              fontFamily: 'museo700',
                               color: Color.fromARGB(255, 52, 32, 31)),
                         ),
                       ),
                       Padding(
-                        padding: const EdgeInsets.only(left: 188),
+                        padding: const EdgeInsets.fromLTRB(0, 0, 14, 0),
                         child: Container(
-                          height: 42,
-                          width: 42,
+                          height: 60,
+                          width: 55,
                           child: Image(
                             image: appimages.iconfontticket,
                           ),
@@ -135,7 +148,10 @@ class _profile extends State<profile> {
               Row(
                 children: [
                   InkWell(
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.of(context).push(MaterialPageRoute(
+                          builder: (context) => Personaldata()));
+                    },
                     child: Container(
                       width: 181,
                       height: 173,
@@ -157,7 +173,7 @@ class _profile extends State<profile> {
                             'Личный кабинет',
                             style: TextStyle(
                                 fontSize: 16,
-                                fontFamily: 'mouse700',
+                                fontFamily: 'museo700',
                                 color: Color.fromARGB(255, 52, 32, 31)),
                           ),
                         )
@@ -168,7 +184,10 @@ class _profile extends State<profile> {
                     width: 10,
                   ),
                   InkWell(
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.of(context).push(MaterialPageRoute(
+                          builder: (context) => questionlist()));
+                    },
                     child: Container(
                       width: 181,
                       height: 173,
@@ -187,10 +206,10 @@ class _profile extends State<profile> {
                         Padding(
                           padding: const EdgeInsets.fromLTRB(13, 77, 28, 0),
                           child: Text(
-                            'Личный кабинет',
+                            'Задать вопрос',
                             style: TextStyle(
                                 fontSize: 16,
-                                fontFamily: 'mouse700',
+                                fontFamily: 'museo700',
                                 color: Color.fromARGB(255, 52, 32, 31)),
                           ),
                         )

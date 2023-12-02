@@ -22,4 +22,5 @@ abstract class appimages {
   static const Rectangle4 = AssetImage('assets/image/Rectanglex4.png');
   static const iconfontuser = AssetImage('assets/image/iconfontuser.png');
   static const comments = AssetImage('assets/image/comments.png');
+  static const arrowright = AssetImage('assets/image/arrowright.png');
 }

@@ -36,7 +36,9 @@ class _QuestList extends State<QuestList> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   InkWell(
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.pop(context);
+                    },
                     child: const Icon(
                       Icons.arrow_back_ios_new_rounded,
                       size: 20,
