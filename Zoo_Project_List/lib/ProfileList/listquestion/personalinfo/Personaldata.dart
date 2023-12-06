@@ -1,3 +1,5 @@
+import 'package:Zoo_Project/ProfileList/listquestion/personalinfo/Myticket/myticket.dart';
+import 'package:Zoo_Project/ProfileList/listquestion/personalinfo/myorder/myorder.dart';
 import 'package:Zoo_Project/image/image.dart';
 import 'package:flutter/material.dart';
 
@@ -151,7 +153,10 @@ class _Personaldata extends State<Personaldata> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   InkWell(
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.of(context).push(
+                          MaterialPageRoute(builder: (context) => myorder()));
+                    },
                     child: Container(
                         width: 181,
                         height: 97,
@@ -181,7 +186,10 @@ class _Personaldata extends State<Personaldata> {
                         )),
                   ),
                   InkWell(
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.of(context).push(
+                          MaterialPageRoute(builder: (context) => myticket()));
+                    },
                     child: Container(
                         width: 181,
                         height: 97,

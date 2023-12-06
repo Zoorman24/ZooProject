@@ -23,4 +23,6 @@ abstract class appimages {
   static const iconfontuser = AssetImage('assets/image/iconfontuser.png');
   static const comments = AssetImage('assets/image/comments.png');
   static const arrowright = AssetImage('assets/image/arrowright.png');
+  static const searchzoomin = AssetImage('assets/image/searchzoomin.png');
+  static const searchzoomout = AssetImage('assets/image/searchzoomout.png');
 }

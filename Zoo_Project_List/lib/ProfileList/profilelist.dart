@@ -1,6 +1,6 @@
-import 'package:Zoo_Project/ProfileList/listquestion/Personaldata.dart';
+import 'package:Zoo_Project/ProfileList/listquestion/personalinfo/Personaldata.dart';
 import 'package:Zoo_Project/ProfileList/listquestion/questionlist.dart';
-import 'package:Zoo_Project/ProfileList/listquestion/tecketlist/ticketlist.dart';
+import 'package:Zoo_Project/ProfileList/listquestion/ticketpage/ticketlist.dart';
 import 'package:Zoo_Project/image/image.dart';
 import 'package:flutter/material.dart';
 import 'package:Zoo_Project/ListQuest/OnePage/WidgetsOnePageList/OnePageLIST.dart';

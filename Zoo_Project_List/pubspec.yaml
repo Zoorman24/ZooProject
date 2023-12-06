@@ -20,6 +20,7 @@ dependencies:
   simple_circular_progress_bar: ^1.0.2
   spider: ^4.2.2
   audioplayers: ^5.2.1
+  table_calendar: ^3.0.9
   # ai_barcode_scanner: ^3.4.1
   
 
