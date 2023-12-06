@@ -15,53 +15,73 @@ class NavBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      // margin: EdgeInsets.only(
-      //   bottom: Platform.isAndroid ? 16 : 0,
-      // ),
-      child: BottomAppBar(
-        elevation: 0.0,
-        child: ClipRRect(
-          borderRadius: BorderRadius.only(
-            topLeft: Radius.circular(30.0),
-            topRight: Radius.circular(30.0),
-          ),
-          child: Container(
-            decoration: BoxDecoration(
-              color: const Color.fromARGB(255, 245, 245, 245),
+    return Stack(
+        // margin: EdgeInsets.only(
+        //   bottom: Platform.isAndroid ? 16 : 0,
+        // ),
+        children: [
+          BottomAppBar(
+            elevation: 0.0,
+            child: ClipRRect(
               borderRadius: BorderRadius.only(
-                  topRight: Radius.circular(30), topLeft: Radius.circular(30)),
-            ),
-            height: 30,
-            child: Row(
-              children: [
-                navItem(
-                  ZooIcons.house,
-                  pageIndex == 0,
-                  onTap: () => onTap(0),
+                topLeft: Radius.circular(30.0),
+                topRight: Radius.circular(30.0),
+              ),
+              child: Container(
+                decoration: BoxDecoration(
+                  color: const Color.fromARGB(255, 245, 245, 245),
+                  borderRadius: BorderRadius.only(
+                      topRight: Radius.circular(30),
+                      topLeft: Radius.circular(30)),
                 ),
-                navItem(
-                  ZooIcons.animals,
-                  pageIndex == 1,
-                  onTap: () => onTap(1),
+                height: 30,
+                child: Row(
+                  children: [
+                    navItem(
+                      ZooIcons.house,
+                      pageIndex == 0,
+                      onTap: () => onTap(0),
+                    ),
+                    navItem(
+                      ZooIcons.animals,
+                      pageIndex == 1,
+                      onTap: () => onTap(1),
+                    ),
+                    SizedBox(
+                      width: 64,
+                    ),
+                    navItem(
+                      ZooIcons.map,
+                      pageIndex == 2,
+                      onTap: () => onTap(2),
+                    ),
+                    navItem(
+                      ZooIcons.profile,
+                      pageIndex == 3,
+                      onTap: () => onTap(3),
+                    ),
+                  ],
                 ),
-                const SizedBox(width: 60),
-                navItem(
-                  ZooIcons.map,
-                  pageIndex == 2,
-                  onTap: () => onTap(2),
-                ),
-                navItem(
-                  ZooIcons.profile,
-                  pageIndex == 3,
-                  onTap: () => onTap(3),
-                ),
-              ],
+              ),
             ),
           ),
-        ),
-      ),
-    );
+          Padding(
+            padding: const EdgeInsets.only(bottom: 12, left: 168),
+            child: Container(
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(40),
+                    color: Color.fromRGBO(1, 98, 63, 1)),
+                height: 64,
+                width: 64,
+                child: InkWell(
+                  onTap: () => debugPrint("Add Button pressed"),
+                  child: Icon(
+                    Icons.camera_alt,
+                    color: Colors.white,
+                  ),
+                )),
+          ),
+        ]);
   }
 
   Widget navItem(IconData icon, bool selected, {Function()? onTap}) {

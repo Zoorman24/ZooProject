@@ -188,7 +188,7 @@ class _daylyTicket extends State<daylyTicket> {
                           InkWell(
                             onTap: () {
                               setState(() {
-                                _quantity2 = max(_quantity, 1);
+                                _quantity2 = max(_quantity2, 1);
                                 _quantity2--;
                               });
                             },

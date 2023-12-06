@@ -76,26 +76,6 @@ class _MainScreenState extends State<MainScreen> {
           }
         },
       ),
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
-      floatingActionButton: Container(
-        margin: const EdgeInsets.only(top: 64),
-        height: 64,
-        width: 64,
-        child: FloatingActionButton(
-          backgroundColor: Color.fromRGBO(1, 98, 63, 1),
-          elevation: 0,
-          onPressed: () => debugPrint("Add Button pressed"),
-          shape: RoundedRectangleBorder(
-            side:
-                const BorderSide(width: 3, color: Color.fromRGBO(1, 98, 63, 1)),
-            borderRadius: BorderRadius.circular(100),
-          ),
-          child: const Icon(
-            Icons.camera_alt,
-            color: Colors.white,
-          ),
-        ),
-      ),
     );
   }
 }
