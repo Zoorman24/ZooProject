@@ -16,7 +16,7 @@ class _AnimalList extends State<ListAnimals> {
       backgroundColor: const Color.fromARGB(255, 255, 255, 255),
       body: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.fromLTRB(11, 16, 10, 0),
+          padding: const EdgeInsets.fromLTRB(10, 16, 10, 0),
           child: Column(
             children: [
               const SizedBox(height: 16),

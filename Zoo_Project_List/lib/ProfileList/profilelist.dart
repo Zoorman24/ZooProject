@@ -146,6 +146,7 @@ class _profile extends State<profile> {
                 height: 11,
               ),
               Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   InkWell(
                     onTap: () {
@@ -153,8 +154,8 @@ class _profile extends State<profile> {
                           builder: (context) => Personaldata()));
                     },
                     child: Container(
-                      width: 181,
-                      height: 173,
+                      width: MediaQuery.of(context).size.width / 2.2,
+                      height: 176,
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(20),
                           color: const Color.fromARGB(255, 240, 240, 240)),
@@ -168,7 +169,7 @@ class _profile extends State<profile> {
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsets.fromLTRB(13, 77, 28, 0),
+                          padding: const EdgeInsets.fromLTRB(13, 77, 0, 0),
                           child: Text(
                             'Личный кабинет',
                             style: TextStyle(
@@ -180,17 +181,14 @@ class _profile extends State<profile> {
                       ]),
                     ),
                   ),
-                  SizedBox(
-                    width: 10,
-                  ),
                   InkWell(
                     onTap: () {
                       Navigator.of(context).push(MaterialPageRoute(
                           builder: (context) => questionlist()));
                     },
                     child: Container(
-                      width: 181,
-                      height: 173,
+                      width: MediaQuery.of(context).size.width / 2.2,
+                      height: 176,
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(20),
                           color: const Color.fromARGB(255, 240, 240, 240)),
@@ -204,7 +202,7 @@ class _profile extends State<profile> {
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsets.fromLTRB(13, 77, 28, 0),
+                          padding: const EdgeInsets.fromLTRB(13, 77, 0, 0),
                           child: Text(
                             'Задать вопрос',
                             style: TextStyle(

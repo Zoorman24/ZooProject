@@ -70,13 +70,15 @@ class mammals extends StatelessWidget {
                                   fontSize: 16,
                                   fontFamily: 'museo300',
                                   color: Color.fromARGB(255, 52, 32, 31))),
-                        )
+                        ),
                       ],
                     ),
                   ),
-                  Padding(
-                    padding: const EdgeInsets.fromLTRB(31, 30, 0, 34),
-                    child: Container(child: Image(image: appimages.arrow)),
+                  Expanded(
+                    child: Container(
+                        height: 24,
+                        width: 24,
+                        child: Image(image: appimages.arrow)),
                   )
                 ],
               ),

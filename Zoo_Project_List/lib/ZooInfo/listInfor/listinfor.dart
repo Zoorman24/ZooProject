@@ -55,7 +55,7 @@ class _listinfor extends State<listinfor> {
             Stack(
               children: [
                 Padding(
-                  padding: const EdgeInsets.fromLTRB(11, 16, 10, 0),
+                  padding: const EdgeInsets.fromLTRB(10, 16, 10, 0),
                   child: Column(
                     children: [
                       Row(
@@ -240,7 +240,7 @@ class _listinfor extends State<listinfor> {
                                 borderRadius: BorderRadius.circular(20),
                                 color: const Color.fromRGBO(255, 179, 87, 1)),
                             child: Padding(
-                              padding: EdgeInsets.fromLTRB(27, 51, 12, 0),
+                              padding: EdgeInsets.fromLTRB(15, 51, 15, 0),
                               child: Column(
                                 children: [
                                   Row(
