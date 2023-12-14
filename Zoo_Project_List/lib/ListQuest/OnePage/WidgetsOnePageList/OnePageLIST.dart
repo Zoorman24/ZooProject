@@ -1,4 +1,5 @@
 import 'package:Zoo_Project/ListQuest/OnePage/WidgetsOnePageList/ListAnimals.dart';
+import 'package:Zoo_Project/image/image.dart';
 
 import 'package:flutter/material.dart';
 import 'package:simple_circular_progress_bar/simple_circular_progress_bar.dart';
@@ -39,10 +40,7 @@ class _QuestList extends State<QuestList> {
                     onTap: () {
                       Navigator.pop(context);
                     },
-                    child: const Icon(
-                      Icons.arrow_back_ios_new_rounded,
-                      size: 20,
-                    ),
+                    child: Image(image: appimages.arrowcircleleft),
                   ),
                   const Text(
                     'Задания',

@@ -18,7 +18,7 @@ class _Quest extends State<ZooinfoList> {
         child: Column(
           children: [
             Padding(
-              padding: const EdgeInsets.only(right: 9),
+              padding: const EdgeInsets.only(right: 10),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
@@ -36,13 +36,12 @@ class _Quest extends State<ZooinfoList> {
               height: 32,
             ),
             Wrap(
-              runSpacing: 11,
-              spacing: 11,
+              runSpacing: 10,
+              spacing: 10,
               children: [
                 Container(
-                  padding: EdgeInsets.only(left: 10),
-                  width: 172,
-                  height: 162,
+                  width: MediaQuery.of(context).size.width / 2.15,
+                  height: 167,
                   child: InkWell(
                     onTap: () {
                       Navigator.of(context).push(MaterialPageRoute(
@@ -54,45 +53,40 @@ class _Quest extends State<ZooinfoList> {
                   ),
                 ),
                 Container(
-                  padding: EdgeInsets.only(right: 10),
-                  width: 172,
-                  height: 162,
+                  width: MediaQuery.of(context).size.width / 2.15,
+                  height: 167,
                   child: InkWell(
                     onTap: () {},
                     child: const Image(image: appimages.birds),
                   ),
                 ),
                 Container(
-                  padding: EdgeInsets.only(left: 10),
-                  width: 172,
-                  height: 162,
+                  width: MediaQuery.of(context).size.width / 2.15,
+                  height: 167,
                   child: InkWell(
                     onTap: () {},
                     child: const Image(image: appimages.Invert),
                   ),
                 ),
                 Container(
-                  padding: EdgeInsets.only(right: 10),
-                  width: 172,
-                  height: 162,
+                  width: MediaQuery.of(context).size.width / 2.15,
+                  height: 167,
                   child: InkWell(
                     onTap: () {},
                     child: const Image(image: appimages.Reptiles),
                   ),
                 ),
                 Container(
-                  padding: EdgeInsets.only(left: 10),
-                  width: 172,
-                  height: 162,
+                  width: MediaQuery.of(context).size.width / 2.15,
+                  height: 167,
                   child: InkWell(
                     onTap: () {},
                     child: const Image(image: appimages.Amphibians),
                   ),
                 ),
                 Container(
-                  padding: EdgeInsets.only(right: 10),
-                  width: 172,
-                  height: 162,
+                  width: MediaQuery.of(context).size.width / 2.15,
+                  height: 167,
                   child: InkWell(
                     onTap: () {},
                     child: const Image(image: appimages.fish),

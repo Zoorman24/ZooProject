@@ -251,7 +251,10 @@ class _listinfor extends State<listinfor> {
                                         ),
                                         child: Container(
                                           padding: EdgeInsets.only(left: 2),
-                                          width: 284,
+                                          width: MediaQuery.of(context)
+                                                  .size
+                                                  .width /
+                                              1.28,
                                           height: 11,
                                           decoration: BoxDecoration(
                                               borderRadius:
@@ -259,7 +262,10 @@ class _listinfor extends State<listinfor> {
                                               color: Colors.white),
                                           child: SizedBox(
                                             height: 7,
-                                            width: 281,
+                                            width: MediaQuery.of(context)
+                                                    .size
+                                                    .width /
+                                                1.4,
                                             child: SliderTheme(
                                               data: SliderThemeData(
                                                 overlayShape:
@@ -295,6 +301,7 @@ class _listinfor extends State<listinfor> {
                                       ),
                                       Container(
                                         height: 27,
+                                        width: 27,
                                         child: IconButton(
                                           icon: Icon(
                                             isPlaying
@@ -389,7 +396,9 @@ class _listinfor extends State<listinfor> {
                                         MainAxisAlignment.spaceBetween,
                                     children: [
                                       Container(
-                                        width: 189,
+                                        width:
+                                            MediaQuery.of(context).size.width /
+                                                2.2,
                                         child: Column(
                                           crossAxisAlignment:
                                               CrossAxisAlignment.start,
@@ -480,7 +489,7 @@ class _listinfor extends State<listinfor> {
                   ),
                 ),
                 const Positioned(
-                    left: 100, top: 70, child: Image(image: appimages.Layer)),
+                    left: 65, top: 70, child: Image(image: appimages.Layer)),
                 Positioned(
                   left: 30,
                   top: 370,

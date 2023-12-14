@@ -1,3 +1,4 @@
+import 'package:Zoo_Project/image/image.dart';
 import 'package:flutter/material.dart';
 
 @override
@@ -28,10 +29,7 @@ class _Quest extends State<Quest> {
                     onTap: () {
                       Navigator.pop(context);
                     },
-                    child: const Icon(
-                      Icons.arrow_back_ios_new_rounded,
-                      size: 20,
-                    ),
+                    child: Image(image: appimages.arrowcircleleft),
                   ),
                 ],
               ),

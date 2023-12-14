@@ -33,33 +33,24 @@ class myticketlist extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.only(top: 2, left: 22),
                   child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text(
-                        'Детский билет x 1 ',
+                        'Детский билет x 1 ' '     Взрослый билет x 1 ',
                         style: TextStyle(
                             fontSize: 10,
                             fontFamily: 'museo300',
                             color: Colors.black),
                       ),
-                      SizedBox(
-                        width: 15,
-                      ),
-                      Text(
-                        'Взрослый билет x 1 ',
-                        style: TextStyle(
-                            fontSize: 10,
-                            fontFamily: 'museo300',
-                            color: Colors.black),
-                      ),
-                      SizedBox(
-                        width: 83,
-                      ),
-                      Text(
-                        '600 р ',
-                        style: TextStyle(
-                            fontSize: 16,
-                            fontFamily: 'museo700',
-                            color: const Color.fromARGB(255, 220, 121, 1)),
+                      Padding(
+                        padding: const EdgeInsets.only(right: 19),
+                        child: Text(
+                          '600 р ',
+                          style: TextStyle(
+                              fontSize: 16,
+                              fontFamily: 'museo700',
+                              color: const Color.fromARGB(255, 220, 121, 1)),
+                        ),
                       )
                     ],
                   ),

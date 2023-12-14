@@ -34,7 +34,6 @@ class NavBar extends StatelessWidget {
                       topRight: Radius.circular(30),
                       topLeft: Radius.circular(30)),
                 ),
-                height: 30,
                 child: Row(
                   children: [
                     navItem(
@@ -66,7 +65,9 @@ class NavBar extends StatelessWidget {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.only(bottom: 12, left: 168),
+            padding: EdgeInsets.only(
+                bottom: MediaQuery.of(context).size.height / 130,
+                left: MediaQuery.of(context).size.width / 2.4),
             child: Container(
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(40),

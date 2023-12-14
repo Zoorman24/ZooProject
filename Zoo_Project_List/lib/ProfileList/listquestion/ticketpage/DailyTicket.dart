@@ -26,7 +26,7 @@ class _daylyTicket extends State<daylyTicket> {
           children: [
             Container(
               height: 88,
-              width: 180,
+              width: MediaQuery.of(context).size.width / 2.15,
               decoration: BoxDecoration(
                 borderRadius: BorderRadiusDirectional.circular(20),
                 color: const Color.fromARGB(255, 245, 245, 245),
@@ -37,7 +37,7 @@ class _daylyTicket extends State<daylyTicket> {
                     Row(
                       children: [
                         Padding(
-                          padding: const EdgeInsets.only(top: 12, left: 20),
+                          padding: const EdgeInsets.only(top: 12, left: 14),
                           child: Text(
                             'Взрослый билет',
                             style: TextStyle(
@@ -47,7 +47,7 @@ class _daylyTicket extends State<daylyTicket> {
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsets.only(top: 12, left: 12),
+                          padding: const EdgeInsets.only(top: 12, left: 10),
                           child: Text(
                             '600 р ',
                             style: TextStyle(
@@ -59,7 +59,7 @@ class _daylyTicket extends State<daylyTicket> {
                       ],
                     ),
                     Padding(
-                      padding: const EdgeInsets.only(top: 2, left: 20),
+                      padding: const EdgeInsets.only(top: 2, left: 14),
                       child: Text(
                         '+12 лет',
                         style: TextStyle(
@@ -69,7 +69,7 @@ class _daylyTicket extends State<daylyTicket> {
                       ),
                     ),
                     Padding(
-                      padding: const EdgeInsets.only(left: 20, top: 2),
+                      padding: const EdgeInsets.only(left: 14, top: 2),
                       child: Row(
                         children: [
                           InkWell(
@@ -115,7 +115,7 @@ class _daylyTicket extends State<daylyTicket> {
             ),
             Container(
               height: 88,
-              width: 180,
+              width: MediaQuery.of(context).size.width / 2.15,
               decoration: BoxDecoration(
                 borderRadius: BorderRadiusDirectional.circular(20),
                 color: const Color.fromARGB(255, 245, 245, 245),
@@ -126,7 +126,7 @@ class _daylyTicket extends State<daylyTicket> {
                     Row(
                       children: [
                         Padding(
-                          padding: const EdgeInsets.only(top: 12, left: 20),
+                          padding: const EdgeInsets.only(top: 12, left: 14),
                           child: Text(
                             'Детский билет',
                             style: TextStyle(
@@ -136,7 +136,7 @@ class _daylyTicket extends State<daylyTicket> {
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsets.only(top: 12, left: 12),
+                          padding: const EdgeInsets.only(top: 12, left: 10),
                           child: Text(
                             '600 р ',
                             style: TextStyle(
@@ -148,7 +148,7 @@ class _daylyTicket extends State<daylyTicket> {
                       ],
                     ),
                     Padding(
-                      padding: const EdgeInsets.only(top: 2, left: 20),
+                      padding: const EdgeInsets.only(top: 2, left: 14),
                       child: Text(
                         '+5 - 12 лет',
                         style: TextStyle(
@@ -158,7 +158,7 @@ class _daylyTicket extends State<daylyTicket> {
                       ),
                     ),
                     Padding(
-                      padding: const EdgeInsets.only(left: 20, top: 2),
+                      padding: const EdgeInsets.only(left: 14, top: 2),
                       child: Row(
                         children: [
                           InkWell(
@@ -244,9 +244,10 @@ class _daylyTicket extends State<daylyTicket> {
               Padding(
                 padding: const EdgeInsets.only(top: 2, left: 22),
                 child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text(
-                      'Детский билет x 1 ',
+                      'Детский билет x 1' '      Взрослый билет x 1',
                       style: TextStyle(
                           fontSize: 10,
                           fontFamily: 'museo300',
@@ -255,22 +256,15 @@ class _daylyTicket extends State<daylyTicket> {
                     SizedBox(
                       width: 15,
                     ),
-                    Text(
-                      'Взрослый билет x 1 ',
-                      style: TextStyle(
-                          fontSize: 10,
-                          fontFamily: 'museo300',
-                          color: Colors.black),
-                    ),
-                    SizedBox(
-                      width: 83,
-                    ),
-                    Text(
-                      '600 р ',
-                      style: TextStyle(
-                          fontSize: 16,
-                          fontFamily: 'museo700',
-                          color: const Color.fromARGB(255, 220, 121, 1)),
+                    Padding(
+                      padding: const EdgeInsets.only(right: 19),
+                      child: Text(
+                        '600 р ',
+                        style: TextStyle(
+                            fontSize: 16,
+                            fontFamily: 'museo700',
+                            color: const Color.fromARGB(255, 220, 121, 1)),
+                      ),
                     )
                   ],
                 ),

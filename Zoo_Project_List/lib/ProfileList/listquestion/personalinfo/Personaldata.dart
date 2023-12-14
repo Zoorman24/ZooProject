@@ -22,7 +22,7 @@ class _Personaldata extends State<Personaldata> {
         children: [
           SafeArea(
             child: Padding(
-              padding: const EdgeInsets.fromLTRB(10, 12, 10, 0),
+              padding: const EdgeInsets.fromLTRB(9, 12, 9, 0),
               child: Column(
                 children: [
                   Row(
@@ -163,7 +163,7 @@ class _Personaldata extends State<Personaldata> {
                               builder: (context) => myorder()));
                         },
                         child: Container(
-                            width: 181,
+                            width: MediaQuery.of(context).size.width / 2.15,
                             height: 97,
                             decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(20),
@@ -198,7 +198,7 @@ class _Personaldata extends State<Personaldata> {
                               builder: (context) => myticket()));
                         },
                         child: Container(
-                            width: 181,
+                            width: MediaQuery.of(context).size.width / 2.15,
                             height: 97,
                             decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(20),

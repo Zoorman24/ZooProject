@@ -154,7 +154,7 @@ class _profile extends State<profile> {
                           builder: (context) => Personaldata()));
                     },
                     child: Container(
-                      width: MediaQuery.of(context).size.width / 2.2,
+                      width: MediaQuery.of(context).size.width / 2.16,
                       height: 176,
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(20),
@@ -187,7 +187,7 @@ class _profile extends State<profile> {
                           builder: (context) => questionlist()));
                     },
                     child: Container(
-                      width: MediaQuery.of(context).size.width / 2.2,
+                      width: MediaQuery.of(context).size.width / 2.16,
                       height: 176,
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(20),

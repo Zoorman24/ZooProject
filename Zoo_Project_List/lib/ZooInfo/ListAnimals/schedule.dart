@@ -19,7 +19,7 @@ class mammals extends StatelessWidget {
             },
             child: Container(
               height: 91,
-              width: 380,
+              width: MediaQuery.of(context).size.width,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(20),
                 color: Color.fromARGB(255, 245, 245, 245),
