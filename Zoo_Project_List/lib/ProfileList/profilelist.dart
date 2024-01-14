@@ -1,9 +1,10 @@
+import 'package:Zoo_Project/ProfileList/listquestion/food/food.dart';
 import 'package:Zoo_Project/ProfileList/listquestion/personalinfo/Personaldata.dart';
 import 'package:Zoo_Project/ProfileList/listquestion/questionlist.dart';
 import 'package:Zoo_Project/ProfileList/listquestion/ticketpage/ticketlist.dart';
 import 'package:Zoo_Project/image/image.dart';
 import 'package:flutter/material.dart';
-import 'package:Zoo_Project/ListQuest/OnePage/WidgetsOnePageList/OnePageLIST.dart';
+import 'package:Zoo_Project/ProfileList/listquestion/ListQuest/OnePage/WidgetsOnePageList/OnePageLIST.dart';
 
 @override
 class profile extends StatefulWidget {
@@ -23,7 +24,10 @@ class _profile extends State<profile> {
           child: Column(
             children: [
               InkWell(
-                onTap: () {},
+                onTap: () {
+                  Navigator.of(context).push(
+                      MaterialPageRoute(builder: (context) => foodlist()));
+                },
                 child: Container(
                   height: 97,
                   width: double.infinity,

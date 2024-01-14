@@ -488,11 +488,16 @@ class _listinfor extends State<listinfor> {
                     ],
                   ),
                 ),
-                const Positioned(
-                    left: 65, top: 70, child: Image(image: appimages.Layer)),
                 Positioned(
-                  left: 30,
-                  top: 370,
+                  left: MediaQuery.of(context).size.width / 5.5,
+                  top: MediaQuery.of(context).size.height / 12,
+                  child: Image(
+                    image: appimages.Layer,
+                  ),
+                ),
+                Positioned(
+                  left: MediaQuery.of(context).size.width / 12,
+                  top: MediaQuery.of(context).size.height / 2.1,
                   child: Container(
                     child: Row(
                       children: [

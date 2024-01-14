@@ -25,4 +25,6 @@ abstract class appimages {
   static const arrowright = AssetImage('assets/image/arrowright.png');
   static const searchzoomin = AssetImage('assets/image/searchzoomin.png');
   static const searchzoomout = AssetImage('assets/image/searchzoomout.png');
+  static const coffe = AssetImage('assets/image/coffe.png');
+  static const arrowrightfood = AssetImage('assets/image/arrowrightfood.png');
 }
