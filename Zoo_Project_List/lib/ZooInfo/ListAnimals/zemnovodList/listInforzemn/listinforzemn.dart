@@ -489,11 +489,11 @@ class _listinforZemnovod extends State<listinforZemnovod> {
                   ),
                 ),
                 Positioned(
-                  left: MediaQuery.of(context).size.width / 2.1,
-                  top: MediaQuery.of(context).size.height / 4.7,
+                  left: MediaQuery.of(context).size.width / 4,
+                  top: MediaQuery.of(context).size.height / 7,
                   child: Container(
-                      height: 365,
-                      width: 180,
+                      height: 350,
+                      width: 260,
                       child: Image(image: appimages.zemn)),
                 ),
                 Positioned(

@@ -16,7 +16,7 @@ class spisokbirds extends StatelessWidget {
           InkWell(
             onTap: () {
               Navigator.of(context).push(
-                  MaterialPageRoute(builder: (context) => listinforBitds()));
+                  MaterialPageRoute(builder: (context) => listinforBirds()));
             },
             child: Container(
               height: 91,

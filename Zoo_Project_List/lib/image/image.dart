@@ -29,4 +29,13 @@ abstract class appimages {
   static const arrowrightfood = AssetImage('assets/image/arrowrightfood.png');
   static const zemn = AssetImage('assets/image/zemn1.png');
   static const redibis = AssetImage('assets/image/redibis.png');
+  static const group1 = AssetImage('assets/image/Group1.png');
+  static const group2 = AssetImage('assets/image/Group2.png');
+  static const group3 = AssetImage('assets/image/Group3.png');
+  static const readall = AssetImage('assets/image/readall.png');
+  static const group4 = AssetImage('assets/image/Group4.png');
+  static const group5 = AssetImage('assets/image/Group5.png');
+  static const vieline = AssetImage('assets/image/vieline.png');
+  static const group6 = AssetImage('assets/image/Group6.png');
+  static const group7 = AssetImage('assets/image/Group7.png');
 }

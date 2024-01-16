@@ -3,10 +3,10 @@ import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
 
 @override
-class listinforBitds extends StatefulWidget {
-  const listinforBitds({super.key});
+class listinforBirds extends StatefulWidget {
+  const listinforBirds({super.key});
   @override
-  State<listinforBitds> createState() => _listinforZemnovod();
+  State<listinforBirds> createState() => _listinforBirds();
 }
 
 final player = AudioPlayer();
@@ -18,7 +18,7 @@ String formatTime(int seconds) {
   return '${(Duration(seconds: seconds))}'.split('.')[0].padLeft(8, '0');
 }
 
-class _listinforZemnovod extends State<listinforBitds> {
+class _listinforBirds extends State<listinforBirds> {
   @override
   void initState() {
     super.initState();
@@ -68,7 +68,7 @@ class _listinforZemnovod extends State<listinforBitds> {
                             },
                           ),
                           const Text(
-                            'Земноводные',
+                            'Птицы',
                             style: TextStyle(
                                 fontSize: 40,
                                 fontFamily: 'museo700',
@@ -313,7 +313,7 @@ class _listinforZemnovod extends State<listinforBitds> {
                                               player.pause();
                                             } else {
                                               player.play(AssetSource(
-                                                  'sound/sound3.mp3'));
+                                                  'sound/sound2.mp3'));
                                             }
                                           },
                                         ),
@@ -489,11 +489,11 @@ class _listinforZemnovod extends State<listinforBitds> {
                   ),
                 ),
                 Positioned(
-                  left: MediaQuery.of(context).size.width / 2.1,
-                  top: MediaQuery.of(context).size.height / 4.7,
+                  left: MediaQuery.of(context).size.width / 4,
+                  top: MediaQuery.of(context).size.height / 7,
                   child: Container(
-                      height: 365,
-                      width: 180,
+                      height: 350,
+                      width: 260,
                       child: Image(image: appimages.redibis)),
                 ),
                 Positioned(

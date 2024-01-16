@@ -1,5 +1,6 @@
 import 'package:Zoo_Project/ProfileList/profilelist.dart';
 import 'package:Zoo_Project/ZooInfo/ListZooInfo/ZooInfolist.dart';
+import 'package:Zoo_Project/homelist/homelist.dart';
 
 import 'package:Zoo_Project/navigationBar/nav_model.dart';
 
@@ -12,14 +13,9 @@ class MainScreen extends StatefulWidget {
 
   @override
   State<MainScreen> createState() => _MainScreenState();
-
-  
 }
 
 class _MainScreenState extends State<MainScreen> {
-
-
-
   final homeNavKey = GlobalKey<NavigatorState>();
   final animalslist = GlobalKey<NavigatorState>();
   final maplist = GlobalKey<NavigatorState>();
@@ -33,7 +29,7 @@ class _MainScreenState extends State<MainScreen> {
     super.initState();
     _wigetList = [
       NavModel(
-        page: const ZooinfoList(),
+        page: const homelist(),
         navKey: homeNavKey,
       ),
       NavModel(
