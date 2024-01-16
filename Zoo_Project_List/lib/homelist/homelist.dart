@@ -33,7 +33,7 @@ class _homelist extends State<homelist> {
                   ),
                   SizedBox(height: 20),
                   Container(
-                    width: 357,
+                    width: double.infinity,
                     height: 163,
                     child: Image(image: appimages.group1),
                   ),
@@ -48,13 +48,13 @@ class _homelist extends State<homelist> {
                   ),
                   SizedBox(height: 10),
                   Container(
-                    width: 357,
+                    width: double.infinity,
                     height: 116,
                     child: Image(image: appimages.group2),
                   ),
                   SizedBox(height: 15),
                   Container(
-                    width: 357,
+                    width: double.infinity,
                     height: 116,
                     child: Image(image: appimages.group3),
                   ),
@@ -69,13 +69,13 @@ class _homelist extends State<homelist> {
                   ),
                   SizedBox(height: 17),
                   Container(
-                    width: 355,
+                    width: double.infinity,
                     height: 106,
                     child: Image(image: appimages.group4),
                   ),
                   SizedBox(height: 12),
                   Container(
-                    width: 355,
+                    width: double.infinity,
                     height: 106,
                     child: Image(image: appimages.group5),
                   ),
@@ -90,13 +90,13 @@ class _homelist extends State<homelist> {
                   ),
                   SizedBox(height: 21),
                   Container(
-                    width: 355,
+                    width: double.infinity,
                     height: 106,
                     child: Image(image: appimages.group6),
                   ),
                   SizedBox(height: 12),
                   Container(
-                    width: 355,
+                    width: double.infinity,
                     height: 106,
                     child: Image(image: appimages.group7),
                   ),
