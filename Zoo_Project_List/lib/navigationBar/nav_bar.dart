@@ -1,6 +1,7 @@
 // import 'dart:io';
 
 import 'package:Zoo_Project/ZooIcons/zoo_icons.dart';
+import 'package:Zoo_Project/repoaitories/animals/animals_repositories.dart';
 
 import 'package:flutter/material.dart';
 
@@ -75,8 +76,8 @@ class NavBar extends StatelessWidget {
                     color: Color.fromRGBO(1, 98, 63, 1)),
                 height: 64,
                 width: 64,
-                child: InkWell(
-                  onTap: () => debugPrint("Add Button pressed"),
+                child: InkWell(onTap: (){ AnimalsRepository().getAnimalsList();},
+                  // onTap: () => debugPrint("Add Button pressed"),
                   child: Icon(
                     Icons.camera_alt,
                     color: Colors.white,
