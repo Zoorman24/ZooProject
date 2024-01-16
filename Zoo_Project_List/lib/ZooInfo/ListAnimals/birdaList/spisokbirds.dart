@@ -1,3 +1,4 @@
+import 'package:Zoo_Project/ZooInfo/ListAnimals/birdaList/listInforbirds/listinforbirds.dart';
 import 'package:Zoo_Project/image/image.dart';
 // import 'package:Zoo_Project/ZooInfo/listInfor/listinfor.dart';
 
@@ -14,8 +15,8 @@ class spisokbirds extends StatelessWidget {
         children: [
           InkWell(
             onTap: () {
-              // Navigator.of(context)
-              //     .push(MaterialPageRoute(builder: (context) => listinfor()));
+              Navigator.of(context).push(
+                  MaterialPageRoute(builder: (context) => listinforBitds()));
             },
             child: Container(
               height: 91,
@@ -31,7 +32,7 @@ class spisokbirds extends StatelessWidget {
                     child: Container(
                         height: 85,
                         width: 92,
-                        child: Image(image: appimages.Rectangle4)),
+                        child: Image(image: appimages.redibis)),
                   ),
                   SizedBox(
                     width: 22,

@@ -1,5 +1,5 @@
 import 'package:Zoo_Project/image/image.dart';
-import 'package:Zoo_Project/ZooInfo/listInfor/listinfor.dart';
+import 'package:Zoo_Project/ZooInfo/ListAnimals/mlekoplist/listInfor/listinfor.dart';
 
 import 'package:flutter/material.dart';
 

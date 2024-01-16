@@ -219,7 +219,7 @@ class _profile extends State<profile> {
                     ),
                   ),
                 ],
-              )
+              ),
             ],
           ),
         ),
