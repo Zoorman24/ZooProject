@@ -12,9 +12,14 @@ class MainScreen extends StatefulWidget {
 
   @override
   State<MainScreen> createState() => _MainScreenState();
+
+  
 }
 
 class _MainScreenState extends State<MainScreen> {
+
+
+
   final homeNavKey = GlobalKey<NavigatorState>();
   final animalslist = GlobalKey<NavigatorState>();
   final maplist = GlobalKey<NavigatorState>();

@@ -1,4 +1,9 @@
-import 'package:Zoo_Project/ZooInfo/ListAnimals/ListAnimals.dart';
+import 'package:Zoo_Project/ZooInfo/ListAnimals/bespozList/bespozList.dart';
+import 'package:Zoo_Project/ZooInfo/ListAnimals/birdaList/BirdsList.dart';
+import 'package:Zoo_Project/ZooInfo/ListAnimals/fishList/fishList.dart';
+import 'package:Zoo_Project/ZooInfo/ListAnimals/mlekoplist/ListAnimals.dart';
+import 'package:Zoo_Project/ZooInfo/ListAnimals/repriliiList/reptiliiList.dart';
+import 'package:Zoo_Project/ZooInfo/ListAnimals/zemnovodList/zemnovodList.dart';
 import 'package:Zoo_Project/image/image.dart';
 import 'package:flutter/material.dart';
 
@@ -18,7 +23,7 @@ class _Quest extends State<ZooinfoList> {
         child: Column(
           children: [
             Padding(
-              padding: const EdgeInsets.only(right: 10),
+              padding: const EdgeInsets.only(right: 10,top: 16),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
@@ -56,7 +61,8 @@ class _Quest extends State<ZooinfoList> {
                   width: MediaQuery.of(context).size.width / 2.15,
                   height: 167,
                   child: InkWell(
-                    onTap: () {},
+                    onTap: () {Navigator.of(context).push(MaterialPageRoute(
+                          builder: (context) => BirdsList()));},
                     child: const Image(image: appimages.birds),
                   ),
                 ),
@@ -64,7 +70,8 @@ class _Quest extends State<ZooinfoList> {
                   width: MediaQuery.of(context).size.width / 2.15,
                   height: 167,
                   child: InkWell(
-                    onTap: () {},
+                    onTap: () {Navigator.of(context).push(MaterialPageRoute(
+                          builder: (context) => bespozList()));},
                     child: const Image(image: appimages.Invert),
                   ),
                 ),
@@ -72,7 +79,8 @@ class _Quest extends State<ZooinfoList> {
                   width: MediaQuery.of(context).size.width / 2.15,
                   height: 167,
                   child: InkWell(
-                    onTap: () {},
+                    onTap: () {Navigator.of(context).push(MaterialPageRoute(
+                          builder: (context) => repriliiList()));},
                     child: const Image(image: appimages.Reptiles),
                   ),
                 ),
@@ -80,7 +88,8 @@ class _Quest extends State<ZooinfoList> {
                   width: MediaQuery.of(context).size.width / 2.15,
                   height: 167,
                   child: InkWell(
-                    onTap: () {},
+                    onTap: () {Navigator.of(context).push(MaterialPageRoute(
+                          builder: (context) => zemnovodList()));},
                     child: const Image(image: appimages.Amphibians),
                   ),
                 ),
@@ -88,7 +97,8 @@ class _Quest extends State<ZooinfoList> {
                   width: MediaQuery.of(context).size.width / 2.15,
                   height: 167,
                   child: InkWell(
-                    onTap: () {},
+                    onTap: () {Navigator.of(context).push(MaterialPageRoute(
+                          builder: (context) => fishList()));},
                     child: const Image(image: appimages.fish),
                   ),
                 ),

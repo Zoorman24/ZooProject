@@ -1,4 +1,4 @@
-import 'package:Zoo_Project/ZooInfo/ListAnimals/schedule.dart';
+import 'package:Zoo_Project/ZooInfo/ListAnimals/mlekoplist/schedule.dart';
 import 'package:Zoo_Project/image/image.dart';
 import 'package:flutter/material.dart';
 
@@ -10,6 +10,8 @@ class ListAnimals extends StatefulWidget {
 }
 
 class _AnimalList extends State<ListAnimals> {
+
+   
   @override
   Widget build(BuildContext context) {
     return Scaffold(
