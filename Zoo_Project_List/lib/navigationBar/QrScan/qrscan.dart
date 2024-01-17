@@ -1,30 +1,34 @@
-import 'dart:typed_data';
-
 import 'package:flutter/material.dart';
 import 'package:mobile_scanner/mobile_scanner.dart';
 
-@override
-class QR extends StatefulWidget {
-  const QR({super.key});
+class QrCodeScanner extends StatefulWidget {
+  const QrCodeScanner({required this.setResult, super.key});
+
+  final Function setResult;
+
   @override
-  State<QR> createState() => _QR();
+  State<QrCodeScanner> createState() => _QrCodeScannerState();
 }
 
-class _QR extends State<QR> {
+class _QrCodeScannerState extends State<QrCodeScanner> {
+  final MobileScannerController controller = MobileScannerController();
+
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: const Text('Mobile Scanner')),
-      body: MobileScanner(
-        // fit: BoxFit.contain,
-        onDetect: (capture) {
-          final List<Barcode> barcodes = capture.barcodes;
-          final Uint8List? image = capture.image;
-          for (final barcode in barcodes) {
-            debugPrint('Barcode found! ${barcode.rawValue}');
-          }
-        },
-      ),
+    return MobileScanner(
+      controller: controller,
+      onDetect: (BarcodeCapture capture) async {
+        final List<Barcode> barcodes = capture.barcodes;
+        Barcode barcode = barcodes.first;
+
+        if (barcode.rawValue == 'https://www.codeonwards.com') {
+          widget.setResult(barcode.rawValue);
+
+          await controller.stop().then((value) => controller.dispose());
+
+          Navigator.of(context).pop();
+        }
+      },
     );
   }
 }

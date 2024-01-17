@@ -1,6 +1,7 @@
 // import 'dart:io';
 
 import 'package:Zoo_Project/ZooIcons/zoo_icons.dart';
+import 'package:Zoo_Project/navigationBar/QrScan/qesc.dart';
 import 'package:Zoo_Project/navigationBar/QrScan/qrscan.dart';
 
 import 'package:flutter/material.dart';
@@ -78,8 +79,8 @@ class NavBar extends StatelessWidget {
                 width: 64,
                 child: InkWell(
                   onTap: () {
-                    Navigator.of(context)
-                        .push(MaterialPageRoute(builder: (context) => QR()));
+                    Navigator.of(context).push(
+                        MaterialPageRoute(builder: (context) => HomeScreen()));
                   },
                   // onTap: () => debugPrint("Add Button pressed"),
                   child: Icon(
